@@ -21,8 +21,8 @@ const projects = [
     tags: ['Android', 'Java', 'Firebase', 'Razorpay'],
     color: '#00d4ff',
     links: [
-      { label: 'Website', icon: <FiExternalLink />, href: '#' },
-      { label: 'Play Store', icon: <FiExternalLink />, href: '#' },
+      { label: 'Website', icon: <FiExternalLink />, href: 'https://diploma2degree.co.in/' },
+      { label: 'Play Store', icon: <FiExternalLink />, href: '#https://play.google.com/store/apps/details?id=com.d2d.diploma2degree&pcampaignid=web_share' },
     ],
     sticker: '🚀',
   },
