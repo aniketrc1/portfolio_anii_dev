@@ -1,0 +1,69 @@
+.contact-section { background: var(--bg-secondary); padding-bottom:0; }
+
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:4rem; }
+
+.info-card { padding:2.5rem; }
+
+.info-heading {
+  font-size:1.5rem; font-weight:800; color:var(--text-primary);
+  margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;
+}
+
+.info-text { color:var(--text-secondary); line-height:1.7; margin-bottom:1.8rem; font-size:0.95rem; }
+.info-text strong { color:var(--text-primary); }
+
+.contact-links { display:flex; flex-direction:column; gap:0.8rem; }
+
+.contact-link-item {
+  display:flex; align-items:center; gap:1rem;
+  text-decoration:none; padding:0.7rem; border-radius:12px; transition:background 0.2s;
+}
+
+.contact-link-item:hover { background:var(--badge-bg); }
+
+.contact-icon {
+  width:44px; height:44px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+
+.ci-label { font-size:0.75rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.1rem; }
+.ci-value { font-size:0.9rem; font-weight:600; }
+
+.cta-card { padding:2.5rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1.3rem; }
+
+.cta-icon-wrap { position:relative; width:100px; height:100px; display:flex; align-items:center; justify-content:center; }
+.cta-big-icon { font-size:3.5rem; position:relative; z-index:2; }
+
+.ring { position:absolute; border-radius:50%; border:1px solid rgba(var(--accent-blue-rgb),0.2); animation:expand 3s ease-out infinite; }
+.ring-1{width:80px;height:80px;animation-delay:0s;}
+.ring-2{width:100px;height:100px;animation-delay:0.5s;}
+.ring-3{width:120px;height:120px;animation-delay:1s;}
+
+@keyframes expand{0%{transform:scale(0.8);opacity:0.5}100%{transform:scale(1.4);opacity:0}}
+
+.cta-heading { font-size:1.3rem; font-weight:800; color:var(--text-primary); }
+.cta-text { color:var(--text-secondary); font-size:0.9rem; line-height:1.7; }
+
+.cta-badges { display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; }
+
+.cta-badge {
+  padding:0.3rem 0.8rem;
+  background:rgba(var(--accent-green-rgb, 5,150,105),0.08);
+  border:1px solid rgba(5,150,105,0.2);
+  color:var(--accent-green); border-radius:50px;
+  font-size:0.78rem; font-weight:600; cursor:default;
+}
+
+.cta-btn { width:100%; justify-content:center; font-size:1rem; }
+
+.footer {
+  text-align:center; padding:2.5rem;
+  border-top:1px solid var(--footer-border);
+  color:var(--footer-text); font-size:0.9rem;
+}
+
+.footer strong { color:var(--text-secondary); }
+.footer-sub { margin-top:0.4rem; font-size:0.8rem; }
+.heart { color:var(--accent-pink); }
+
+@media(max-width:768px){ .contact-grid{grid-template-columns:1fr;} }

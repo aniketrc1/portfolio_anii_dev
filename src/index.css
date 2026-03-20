@@ -1,0 +1,198 @@
+/* ===================== THEME VARIABLES ===================== */
+:root {
+  /* Light Mode (default) */
+  --bg-primary: #f7fafc;
+  --bg-secondary: #edf2f7;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --nav-bg: rgba(247, 250, 252, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.07);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --skill-track: rgba(0, 0, 0, 0.06);
+  --badge-bg: rgba(0, 0, 0, 0.04);
+  --badge-border: rgba(0, 0, 0, 0.08);
+  --social-bg: rgba(0, 0, 0, 0.05);
+  --social-border: rgba(0, 0, 0, 0.10);
+  --footer-border: rgba(0, 0, 0, 0.07);
+  --footer-text: #a0aec0;
+  --section-tag-bg: rgba(0, 0, 0, 0.04);
+
+  /* Accent colors (same both modes) */
+  --accent-blue: #0284c7;
+  --accent-purple: #7c3aed;
+  --accent-pink: #db2777;
+  --accent-green: #059669;
+  --accent-blue-rgb: 2, 132, 199;
+  --accent-purple-rgb: 124, 58, 237;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #050816;
+  --bg-secondary: #0a0f25;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --text-primary: #f0f4ff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --nav-bg: rgba(5, 8, 22, 0.85);
+  --nav-border: rgba(255, 255, 255, 0.07);
+  --card-shadow: 0 8px 32px rgba(0, 212, 255, 0.08);
+  --card-shadow-hover: 0 20px 60px rgba(0, 212, 255, 0.18);
+  --grid-line: rgba(255, 255, 255, 0.03);
+  --skill-track: rgba(255, 255, 255, 0.06);
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --badge-border: rgba(255, 255, 255, 0.1);
+  --social-bg: rgba(255, 255, 255, 0.05);
+  --social-border: rgba(255, 255, 255, 0.1);
+  --footer-border: rgba(255, 255, 255, 0.06);
+  --footer-text: #475569;
+  --section-tag-bg: rgba(255, 255, 255, 0.04);
+
+  --accent-blue: #00d4ff;
+  --accent-purple: #7c3aed;
+  --accent-pink: #ec4899;
+  --accent-green: #10b981;
+  --accent-blue-rgb: 0, 212, 255;
+  --accent-purple-rgb: 124, 58, 237;
+}
+
+/* ===================== RESET ===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-purple); border-radius: 3px; }
+::selection { background: var(--accent-purple); color: white; }
+
+/* ===================== LAYOUT ===================== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 100px 0; }
+
+/* ===================== TYPOGRAPHY ===================== */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===================== COMPONENTS ===================== */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(var(--accent-purple-rgb), 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(var(--accent-purple-rgb), 0.55);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--accent-blue);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(var(--accent-blue-rgb), 0.35);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+}
+
+.mini-sticker { display: inline-block; }
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes pulse-glow {
+  0%,100%{box-shadow:0 0 20px rgba(var(--accent-blue-rgb),0.2)}
+  50%{box-shadow:0 0 40px rgba(var(--accent-blue-rgb),0.5)}
+}
+@keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}}

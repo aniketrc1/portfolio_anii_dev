@@ -1,0 +1,66 @@
+.exp-section { background: var(--bg-primary); }
+
+.exp-block { margin-bottom:4rem; }
+
+.block-title {
+  display:flex; align-items:center; gap:0.7rem;
+  font-size:1.3rem; font-weight:700; color:var(--text-primary);
+  margin-bottom:1.5rem; padding-bottom:0.8rem;
+  border-bottom:1px solid var(--glass-border);
+}
+
+.timeline-card {
+  display:flex; gap:1.5rem; padding:1.8rem; position:relative;
+  margin-bottom:1rem; border-left:3px solid var(--accent);
+}
+
+.timeline-dot {
+  flex-shrink:0; width:48px; height:48px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:1.3rem;
+}
+
+.timeline-content { flex:1; }
+
+.timeline-header {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;
+}
+
+.timeline-role { font-size:1.1rem; font-weight:700; }
+.timeline-company { color:var(--text-secondary); font-size:0.95rem; margin-top:0.2rem; }
+
+.timeline-meta { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; color:var(--text-muted); font-size:0.8rem; }
+.timeline-meta span { display:flex; align-items:center; gap:0.3rem; }
+
+.timeline-bullets { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.timeline-bullets li { color:var(--text-secondary); font-size:0.9rem; line-height:1.6; padding-left:1rem; position:relative; }
+.timeline-bullets li::before { content:'→'; position:absolute; left:0; color:var(--accent); }
+
+.edu-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+
+.edu-card { padding:1.8rem; display:flex; gap:1.2rem; align-items:flex-start; border-left:3px solid var(--accent); }
+.edu-emoji { font-size:2rem; flex-shrink:0; }
+.edu-degree { font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-bottom:0.3rem; }
+.edu-school { font-size:0.9rem; font-weight:700; margin-bottom:0.5rem; }
+.edu-meta { display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted); }
+.edu-score { font-family:'Space Mono',monospace; color:var(--accent-green); font-weight:700; }
+
+.achievements-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.2rem; }
+
+.ach-card {
+  padding:1.5rem; text-align:center; display:flex;
+  flex-direction:column; align-items:center; gap:0.5rem;
+}
+
+.ach-emoji { font-size:2.5rem; }
+.ach-title { font-size:0.95rem; font-weight:700; }
+.ach-org { font-size:0.8rem; color:var(--text-muted); text-align:center; }
+.ach-period {
+  font-size:0.75rem; font-family:'Space Mono',monospace; color:var(--text-muted);
+  background:var(--badge-bg); padding:0.2rem 0.6rem; border-radius:50px;
+}
+
+@media(max-width:640px){
+  .timeline-header{flex-direction:column;}
+  .timeline-meta{align-items:flex-start;}
+}

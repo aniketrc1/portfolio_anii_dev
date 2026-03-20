@@ -1,0 +1,86 @@
+.about-section { background: var(--bg-secondary); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-avatar-side { display:flex; justify-content:center; align-items:center; }
+
+.avatar-wrapper { position:relative; width:280px; height:280px; display:flex; align-items:center; justify-content:center; }
+
+.avatar-glow {
+  position:absolute; inset:-20px; border-radius:50%;
+  background: radial-gradient(circle, rgba(var(--accent-blue-rgb),0.12) 0%, transparent 70%);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.about-logo {
+  width:200px; height:200px; border-radius:30px; object-fit:cover;
+  position:relative; z-index:2;
+  box-shadow: 0 0 40px rgba(var(--accent-blue-rgb),0.25);
+  border: 2px solid rgba(var(--accent-blue-rgb),0.2);
+}
+
+.avatar-ring {
+  position:absolute; inset:-15px; border-radius:50%;
+  border: 2px dashed rgba(var(--accent-blue-rgb),0.25);
+}
+
+.badge-sticker {
+  position:absolute;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius:50px;
+  padding:0.4rem 0.8rem;
+  font-size:0.78rem; font-weight:600;
+  color: var(--text-primary);
+  white-space:nowrap;
+  display:flex; align-items:center; gap:0.4rem;
+  backdrop-filter:blur(10px);
+  z-index:10;
+  box-shadow: var(--card-shadow);
+}
+
+.badge-sticker.gdg { bottom:10px; right:-20px; color:var(--accent-blue); }
+.badge-sticker.student { top:20px; left:-20px; color:var(--accent-purple); }
+
+.about-text-side { display:flex; flex-direction:column; gap:1.2rem; }
+
+.about-greeting { font-size:clamp(1.3rem,3vw,1.8rem); font-weight:800; color:var(--text-primary); }
+
+.about-para { font-size:1rem; color:var(--text-secondary); line-height:1.8; }
+.about-para strong { color:var(--text-primary); }
+
+.about-facts {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:0.5rem;
+}
+
+.fact-card {
+  padding:1rem; text-align:center; display:flex;
+  flex-direction:column; align-items:center; gap:0.3rem;
+}
+
+.fact-emoji { font-size:1.5rem; }
+.fact-value {
+  font-size:1.3rem; font-weight:800;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.fact-label { font-size:0.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; }
+
+.about-actions { display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem; }
+
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:3rem;}
+  .about-avatar-side{order:-1;}
+  .about-facts{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .avatar-wrapper{width:220px;height:220px;}
+  .about-logo{width:160px;height:160px;}
+  .badge-sticker.gdg{right:0;}
+  .badge-sticker.student{left:0;}
+}
