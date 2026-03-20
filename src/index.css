@@ -195,4 +195,4 @@ body {
   50%{box-shadow:0 0 40px rgba(var(--accent-blue-rgb),0.5)}
 }
 @keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
