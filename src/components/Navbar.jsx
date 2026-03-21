@@ -133,6 +133,20 @@ export default function Navbar({ theme, toggleTheme }) {
                 {link.label}
               </motion.a>
             ))}
+            <div className="mobile-cta-row">
+              <a href="mailto:aniketrchavan1@gmail.com" className="btn-primary" onClick={() => setMenuOpen(false)}>
+                Hire Me 🚀
+              </a>
+              <a
+                href="https://wa.me/918767884789?text=Hi%20Aniket%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp"
+                onClick={() => setMenuOpen(false)}
+              >
+                <FiMessageCircle size={14} /> Message Me
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
