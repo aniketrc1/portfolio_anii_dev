@@ -25,6 +25,17 @@ export default function App() {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  // ── Google Analytics: manually fire page_view for React SPA ──
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+      });
+    }
+  }, []);
+
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light');
 
   const handleModalClose = () => {
