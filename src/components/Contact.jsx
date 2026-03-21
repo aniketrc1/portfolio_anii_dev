@@ -6,8 +6,8 @@ const contactInfo = [
   { icon: <FiMail size={22} />, label: 'Email', value: 'aniketrchavan1@gmail.com', href: 'mailto:aniketrchavan1@gmail.com', color: '#00d4ff' },
   { icon: <FiPhoneCall size={22} />, label: 'Phone', value: '+91 87678 84789', href: 'tel:+918767884789', color: '#7c3aed' },
   { icon: <FiMapPin size={22} />, label: 'Location', value: 'Pune, India 🇮🇳', href: '#', color: '#ec4899' },
-  { icon: <FiGithub size={22} />, label: 'GitHub', value: 'github.com/aniket', href: 'https://github.com', color: '#10b981' },
-  { icon: <FiLinkedin size={22} />, label: 'LinkedIn', value: 'Aniket Chavan', href: 'https://linkedin.com', color: '#0ea5e9' },
+  { icon: <FiGithub size={22} />, label: 'GitHub', value: 'github.com/aniket', href: 'https://github.com/aniketrc1', color: '#10b981' },
+  { icon: <FiLinkedin size={22} />, label: 'LinkedIn', value: 'Aniket Chavan', href: 'www.linkedin.com/in/aniket-chavan-b87853281', color: '#0ea5e9' },
 ];
 
 export default function Contact() {
@@ -133,7 +133,7 @@ export default function Contact() {
       {/* Footer */}
       <div className="footer">
         <p>Made with <span className="heart">❤️</span> by <strong>Aniket Chavan</strong> · Android Developer · Pune, India 🇮🇳</p>
-        <p className="footer-sub">© 2025 All rights reserved</p>
+        <p className="footer-sub">© 2026 All rights reserved</p>
       </div>
     </section>
   );

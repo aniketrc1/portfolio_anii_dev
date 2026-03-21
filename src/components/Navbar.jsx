@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
+import { FiMenu, FiX, FiSun, FiMoon, FiMessageCircle } from 'react-icons/fi';
 import logo from '../assets/logo.jpg';
 import './Navbar.css';
 
@@ -84,6 +84,14 @@ export default function Navbar({ theme, toggleTheme }) {
 
           <a href="mailto:aniketrchavan1@gmail.com" className="btn-primary nav-cta">
             Hire Me 🚀
+          </a>
+          <a
+            href="https://wa.me/918767884789?text=Hi%20Aniket%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-whatsapp nav-cta"
+          >
+            <FiMessageCircle size={15} /> Message Me
           </a>
         </div>
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
 import heroImg from '../assets/hero.png';
 import './Hero.css';
 
@@ -72,9 +72,9 @@ export default function Hero() {
                 2000,
                 'Java Enthusiast ☕',
                 2000,
-                'Firebase Architect 🔥',
+                'An Engineer🔥',
                 2000,
-                'GDG Android Lead ⚡',
+                'Built To Scale 🔥',
                 2000,
                 'Open Source Builder 🚀',
                 2000,
@@ -135,6 +135,14 @@ export default function Hero() {
             <a href="#contact" className="btn-outline">
               Contact Me 📬
             </a>
+            <a
+              href="https://drive.google.com/file/d/1pfngAkjj9wEoxoaHJaRRJ_XVznEg8sfh/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-resume"
+            >
+              <FiDownload /> View Resume
+            </a>
           </motion.div>
 
           <motion.div
@@ -144,8 +152,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             {[
-              { icon: <FiGithub />, href: 'https://github.com', label: 'GitHub' },
-              { icon: <FiLinkedin />, href: 'https://linkedin.com', label: 'LinkedIn' },
+              { icon: <FiGithub />, href: 'https://github.com/aniketrc1', label: 'GitHub' },
+              { icon: <FiLinkedin />, href: 'www.linkedin.com/in/aniket-chavan-b87853281', label: 'LinkedIn' },
               { icon: <FiMail />, href: 'mailto:aniketrchavan1@gmail.com', label: 'Email' },
             ].map((s) => (
               <motion.a

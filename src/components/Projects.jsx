@@ -22,7 +22,7 @@ const projects = [
     color: '#00d4ff',
     links: [
       { label: 'Website', icon: <FiExternalLink />, href: 'https://diploma2degree.co.in/' },
-      { label: 'Play Store', icon: <FiExternalLink />, href: '#https://play.google.com/store/apps/details?id=com.d2d.diploma2degree&pcampaignid=web_share' },
+      { label: 'Play Store', icon: <FiExternalLink />, href: 'https://play.google.com/store/apps/details?id=com.d2d.diploma2degree&pcampaignid=web_share' },
     ],
     sticker: '🚀',
   },
@@ -88,16 +88,8 @@ export default function Projects() {
               style={{ '--accent': proj.color }}
             >
               <div className="project-left">
-                <div className="project-img-wrap" style={{ borderColor: proj.color + '40' }}>
-                  <img src={proj.image} alt={proj.title} className="project-img" />
-                  <motion.span
-                    className="project-sticker"
-                    animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
-                    transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
-                  >
-                    {proj.sticker}
-                  </motion.span>
-                  <div className="project-img-overlay" style={{ background: `linear-gradient(135deg, ${proj.color}22, transparent)` }} />
+                <div className="project-logo-wrap" style={{ borderColor: proj.color + '40', background: proj.color + '08' }}>
+                  <img src={proj.image} alt={proj.title} className="project-logo-img" />
                 </div>
 
                 <div className="project-meta">

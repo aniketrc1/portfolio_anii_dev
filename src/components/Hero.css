@@ -216,7 +216,7 @@
 .stat-label { font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; }
 .stat-divider { width:1px; height:40px; background:var(--glass-border); }
 
-.hero-buttons { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+.hero-buttons { display:flex; gap:0.75rem; flex-wrap:nowrap; align-items:center; }
 
 .hero-socials { display:flex; gap:0.8rem; }
 

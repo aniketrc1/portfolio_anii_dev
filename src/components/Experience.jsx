@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
+import aissmsLogo from '../assets/aissms.png';
+import iitLogo from '../assets/iit.png';
+import tlogic from '../assets/tlogic.png'
 import './Experience.css';
 
 const experiences = [
@@ -8,7 +11,7 @@ const experiences = [
     company: 'Tlogic',
     period: 'June 2025 – July 2025',
     location: 'Remote',
-    emoji: '💼',
+    logo: tlogic,
     color: '#00d4ff',
     responsibilities: [
       'Developed Android application features using Java and Android SDK, focusing on clean UI and smooth user experience',
@@ -24,7 +27,7 @@ const education = [
     school: 'AISSMS COE, Pune',
     period: 'Aug 2024 – Present',
     score: 'CGPA: 8.67 / 10',
-    emoji: '🎓',
+    logo: aissmsLogo,
     color: '#7c3aed',
   },
   {
@@ -32,7 +35,7 @@ const education = [
     school: 'Indira Institute of Technology, Nanded',
     period: '2021 – 2024',
     score: '89.94%',
-    emoji: '📚',
+    logo: iitLogo,
     color: '#ec4899',
   },
 ];
@@ -78,8 +81,8 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               style={{ '--accent': exp.color }}
             >
-              <div className="timeline-dot" style={{ background: exp.color, boxShadow: `0 0 15px ${exp.color}80` }}>
-                {exp.emoji}
+              <div className="timeline-dot" style={{ background: exp.color, boxShadow: `0 0 15px ${exp.color}80`, overflow: 'hidden', padding: 0 }}>
+                <img src={exp.logo} alt={exp.company} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }} />
               </div>
               <div className="timeline-content">
                 <div className="timeline-header">
@@ -123,7 +126,9 @@ export default function Experience() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 style={{ '--accent': edu.color }}
               >
-                <div className="edu-emoji">{edu.emoji}</div>
+                <div className="edu-logo-wrap" style={{ borderColor: edu.color + '40', background: edu.color + '08' }}>
+                  <img src={edu.logo} alt={edu.school} className="edu-logo-img" />
+                </div>
                 <div className="edu-info">
                   <p className="edu-degree">{edu.degree}</p>
                   <p className="edu-school" style={{ color: edu.color }}>{edu.school}</p>
