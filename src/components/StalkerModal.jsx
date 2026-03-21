@@ -68,7 +68,7 @@ export default function StalkerModal({ onClose }) {
               exit={{ opacity: 0 }}
             >
               <div className="stalker-result-emoji">🥰</div>
-              <h2 className="stalker-title">Good Boy!</h2>
+              <h2 className="stalker-title">Good  !</h2>
               <p className="stalker-sub">Enjoy the portfolio — you deserve it! 😄</p>
             </motion.div>
           )}
